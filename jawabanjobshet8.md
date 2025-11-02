@@ -182,6 +182,137 @@ Ketika masuk ke iterasi berikutnya, j tidak lagi 0, sehingga kondisi j < i mungk
 
    telah di modifikasikan
 
+   import java.util.Scanner;
+
+public class NilaiKelompok13 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int i = 1, j, nilai;
+        float totalNilai, rataNilai;
+        float maxRata = 0;
+        int kelompokMax = 0;
+
+        
+        while (i <= 6) {
+            System.out.println("\nKelompok " + i);
+
+            totalNilai = 0; 
+
+          
+            for (j = 1; j <= 5; j++) {
+                System.out.print(" Nilai dari penilai ke-" + j + ": ");
+                nilai = sc.nextInt();
+                totalNilai += nilai;
+            }
+
+           
+            rataNilai = totalNilai / 5;
+            System.out.println("Kelompok " + i + " : nilai rata-rata = " + rataNilai);
+
+           
+            if (rataNilai > maxRata) {
+                maxRata = rataNilai;
+                kelompokMax = i;
+            }
+
+            i++;
+        }
+
+        
+        System.out.println("\n=======================================");
+        System.out.println("Kelompok dengan rata-rata tertinggi adalah: Kelompok " 
+                           + kelompokMax + " dengan nilai rata-rata " + maxRata);
+        System.out.println("=======================================");
+
+        sc.close();
+    }
+}
+
+
+## TUGAS 
+
+1. Buatlah program untuk menghitung dan menampilkan jumlah kuadrat bilangan 1 s.d
+n. Gunakan perulangan bersarang. Berikut output yang diharapkan jika n pada rentang
+1 s.d 5.
+
+Jawaban : 
+
+modifikasi kode :
+
+import java.util.Scanner;
+
+ public class kuadrat13 {
+ 
+  public static void main(String[] args) {
+  
+      Scanner sc = new Scanner(System.in);
+      int n = 5;
+
+      for ( int i = 1; i <= n; i++) {
+          int jumlah = 0;
+          String rincian = "";
+
+      for (int j = 1; j <= i; j++) {
+          jumlah += j * j;
+          rincian += j * j;
+          if (j < i) {
+              rincian += " + ";
+         }
+       }
+
+       System.out.println("n = " + i +" \u2192 Jumlah kuadrat = "  + rincian + "=" + jumlah);
+      }
+   }
+ }
+
+ *HASILNYA:* 
+
+ <img width="575" height="186" alt="Screenshot 2025-11-03 050246" src="https://github.com/user-attachments/assets/7df1a81d-4e87-435e-b3f3-2eb1fbb6d785" />
+
+2. Buatlah program untuk mencetak tampilan persegi angka seperti di bawah ini berdasarkan input n (nilai n minimal 3). Contoh n = 3, dan n = 5
+
+   Jawaban :
+
+   modifikasi kode :
+
+   import java.util.Scanner;
+
+public class persegi13 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan nilai n (minimal 3): ");
+        int n = sc.nextInt();
+
+        if (n < 3) {
+            System.out.println("Nilai n minimal 3!");
+            return;
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                
+                if (i == 1 || i == n || j == 1 || j == n) {
+                    System.out.print(n + " ");
+                } 
+                else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+*Hasilnya:* 
+
+<img width="125" height="269" alt="Screenshot 2025-11-03 050450" src="https://github.com/user-attachments/assets/b2c99c9a-9346-4ef0-9acf-b5fea86a6952" />
+
+
+
+
+
 
 
    
