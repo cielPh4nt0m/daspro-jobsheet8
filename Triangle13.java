@@ -14,7 +14,8 @@ import java.util.Scanner;
                 j++;
             }
              i++;
-             System.out.println();
+            
+             System.out.println("");
         }
        
         
